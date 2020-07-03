@@ -60,19 +60,15 @@ timer.Simple(0,function()
 			propname,
 			function(wag)
 				if wag:GetNW2Int(tablename,0) == inserted_index then 
-					print("setting black material1")
 					local ent = wag.ClientEnts and wag.ClientEnts[propname]
 					if not IsValid(ent) then return end	
-					print("setting black material2")
 					for i = 0,9 do
 						ent:SetSubMaterial(i,matspath..i)
 					end
 				end
 				if wag:GetNW2Int(tablename,0) == 1 then
-					print("setting def material1")
 					local ent = wag.ClientEnts and wag.ClientEnts[propname]
 					if not IsValid(ent) then return end
-					print("setting def material2")
 					for i = 0,9 do
 						ent:SetSubMaterial(i,defaultmatspath..i)
 					end
